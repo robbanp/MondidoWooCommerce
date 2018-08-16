@@ -231,7 +231,7 @@ abstract class WC_Gateway_Mondido_Abstract extends WC_Payment_Gateway {
 	 * @return array|mixed|object
 	 */
 	public static function __lookup( $merchant_id, $password, $transaction_id ) {
-		$result = wp_remote_get( 'https://api.mondido.com/v1/transactions/' . $transaction_id, array(
+		$result = wp_remote_get( 'https://api.volvopayments.com/v1/transactions/' . $transaction_id, array(
 			'headers' => array(
 				'Authorization' => 'Basic ' . base64_encode( "{$merchant_id}:{$password}" )
 			)
@@ -293,7 +293,7 @@ abstract class WC_Gateway_Mondido_Abstract extends WC_Payment_Gateway {
 	 * @return array|\WP_Error
 	 */
 	public function captureTransaction( $transaction_id, $amount ) {
-		$result = wp_remote_get( 'https://api.mondido.com/v1/transactions/' . $transaction_id . '/capture', array(
+		$result = wp_remote_get( 'https://api.volvopayments.com/v1/transactions/' . $transaction_id . '/capture', array(
 			'method'  => 'PUT',
 			'headers' => array(
 				'Authorization' => 'Basic ' . base64_encode( "{$this->merchant_id}:{$this->password}" )
@@ -312,7 +312,7 @@ abstract class WC_Gateway_Mondido_Abstract extends WC_Payment_Gateway {
 	 * @throws \Exception
 	 */
 	public function getSubscriptionPlans() {
-		$result = wp_remote_get( 'https://api.mondido.com/v1/plans', array(
+		$result = wp_remote_get( 'https://api.volvopayments.com/v1/plans', array(
 			'headers' => array(
 				'Authorization' => 'Basic ' . base64_encode( "{$this->merchant_id}:{$this->password}" )
 			)
@@ -458,7 +458,7 @@ abstract class WC_Gateway_Mondido_Abstract extends WC_Payment_Gateway {
 
 		$transaction_id = $order->get_transaction_id();
 
-		$result = wp_remote_get( 'https://api.mondido.com/v1/refunds', array(
+		$result = wp_remote_get( 'https://api.volvopayments.com/v1/refunds', array(
 			'method'  => 'POST',
 			'headers' => array(
 				'Authorization' => 'Basic ' . base64_encode( "{$this->merchant_id}:{$this->password}" )

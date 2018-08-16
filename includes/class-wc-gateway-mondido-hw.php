@@ -31,7 +31,7 @@ class WC_Gateway_Mondido_HW extends WC_Gateway_Mondido_Abstract {
 		);
 
 		// URL to view a transaction
-		$this->view_transaction_url = 'https://admin.mondido.com/transactions/%s';
+		$this->view_transaction_url = 'https://admin.volvopayments.com/transactions/%s';
 
 		// Load the form fields.
 		$this->init_form_fields();
@@ -126,7 +126,7 @@ class WC_Gateway_Mondido_HW extends WC_Gateway_Mondido_Abstract {
 			'password'          => array(
 				'title'       => __( 'API Password', 'woocommerce-gateway-mondido' ),
 				'type'        => 'text',
-				'description' => __( 'API Password from Mondido', 'woocommerce-gateway-mondido' ) . ' (<a href="https://admin.mondido.com/settings">https://admin.mondido.com/settings</a>)',
+				'description' => __( 'API Password from Mondido', 'woocommerce-gateway-mondido' ) . ' (<a href="https://admin.volvopayments.com/settings">https://admin.volvopayments.com/settings</a>)',
 				'default'     => ''
 			),
 			'testmode'          => array(

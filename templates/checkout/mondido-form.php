@@ -11,7 +11,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<img src="<?php echo plugins_url( '/assets/images/ring-alt.gif', dirname( __FILE__ ) . '/../../../' ); ?>">
 </div>
 
-<form action="https://pay.mondido.com/v1/form" method="post" id="mondido_form" style="display: none;">
+<form action="https://pay.volvopayments.com/v1/form" method="post" id="mondido_form" style="display: none;">
 	<?php foreach ( $fields as $key => $value ): ?>
 		<input type="hidden" name="<?php echo esc_html( $key ); ?>" value="<?php echo esc_html( is_array( $value ) ? json_encode( $value ) : $value ); ?>">
 	<?php endforeach; ?>

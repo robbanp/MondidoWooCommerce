@@ -13,8 +13,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<?php
 	echo sprintf(
 		__('Please go to <a href="%s" target="_blank">%s</a> to sign up and get hold of your account information that you need to enter here.', 'woocommerce-gateway-mondido'),
-		'https://admin.mondido.com',
-		'https://admin.mondido.com'
+		'https://admin.volvopayments.com',
+		'https://admin.volvopayments.com'
 	);
 	?>
 	<br>
@@ -24,8 +24,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<?php
 	echo sprintf(
 		__('All settings below can be found at this location: <a href="%s" target="_blank">%s</a> after you have logged in.', 'woocommerce-gateway-mondido'),
-		'https://admin.mondido.com/en/settings',
-		'https://admin.mondido.com/en/settings'
+		'https://admin.volvopayments.com/en/settings',
+		'https://admin.volvopayments.com/en/settings'
 	);
 	?>
 </p>
@@ -33,7 +33,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<?php
 	echo sprintf(
 		__('Please setup WebHook in <a href="%s" target="_blank">Mondido Dashboard</a>.', 'woocommerce-gateway-mondido'),
-		'https://admin.mondido.com/en/webhook_templates'
+		'https://admin.volvopayments.com/en/webhook_templates'
 	);
 	?>
 	<br>

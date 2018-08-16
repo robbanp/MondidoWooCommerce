@@ -58,7 +58,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<?php endif; ?>
 	<a href="<?php echo esc_url( $transaction['href'] ); ?>" target="_blank"><?php _e( 'Payment Link', 'woocommerce-gateway-mondido' ) ?></a>
 	<br />
-	<a href="<?php echo esc_url( 'https://admin.mondido.com/transactions/' . $transaction['id'] ); ?>" target="_blank"><?php _e( 'View at Mondido', 'woocommerce-gateway-mondido' ) ?></a>
+	<a href="<?php echo esc_url( 'https://admin.volvopayments.com/transactions/' . $transaction['id'] ); ?>" target="_blank"><?php _e( 'View at Mondido', 'woocommerce-gateway-mondido' ) ?></a>
 	<br />
 
 	<?php if ( $transaction['status'] === 'authorized' ): ?>
